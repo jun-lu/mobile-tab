@@ -317,12 +317,12 @@ KISSY.add('gallery/mobile-tab/1.0/index',function (S, Node,Base) {
 		}
 
 	};
-
+	
 	//andriod 2.3 overflow:scroll 无效处理 放弃滑动缓动
 	//alert(navigator.userAgent)
 	//alert(navigator.userAgent.indexOf("Android 2."))
 	if(navigator.userAgent.indexOf("Android 2.") != -1){
-		MulitpeTab.prototype.touchScroll = function( elem ){
+		MobileTab.prototype.touchScroll = function( elem ){
 
 		    var el=elem[0]
 		    var scrollStartPos=0;

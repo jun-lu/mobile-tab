@@ -200,6 +200,23 @@ module.exports = function(grunt) {
         },
         isv_gallery:{
             default_option:{}
+        },
+        connect:{
+            
+            options: {
+                port: 9000,
+                livereload: 35729,
+                hostname: '0.0.0.0'
+            },
+            
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        ''
+                    ]
+                }
+            }
         }
         
     });
@@ -218,6 +235,7 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks('grunt-isv-gallery');
     
 
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.registerTask('build', '默认构建任务', function() {
 		task.run(['clean:build', 'kmc','uglify', 'copy','less','sass','cssmin']);
@@ -232,6 +250,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('demo', '开启demo模式', function() {
 		task.run(['flexcombo:demo','watch:all']);
 	});
+
+    grunt.registerTask('server', ['connect:livereload','watch']);
 
     return grunt.registerTask('default', '',function(type){
 		if (!type) {

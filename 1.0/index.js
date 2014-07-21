@@ -311,7 +311,7 @@ KISSY.add(function (S, Node,Base) {
 		}
 
 	};
-
+	
 	//andriod 2.3 overflow:scroll 无效处理 放弃滑动缓动
 	//alert(navigator.userAgent)
 	//alert(navigator.userAgent.indexOf("Android 2."))
