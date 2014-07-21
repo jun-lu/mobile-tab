@@ -197,7 +197,11 @@ module.exports = function(grunt) {
                     }
                 ]
             }
+        },
+        isv_gallery:{
+            default_option:{}
         }
+        
     });
 
     // 使用到的任务，可以增加其他任务
@@ -211,6 +215,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-sass');
 	
+        grunt.loadNpmTasks('grunt-isv-gallery');
+    
 
 
 	grunt.registerTask('build', '默认构建任务', function() {
