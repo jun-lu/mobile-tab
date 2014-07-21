@@ -323,7 +323,7 @@ KISSY.add(function (S, Node,Base) {
 
 			    el.addEventListener("touchstart", function(event) {
 			        scrollStartPos=this.scrollLeft+event.touches[0].pageX;
-			        event.preventDefault();
+			        //event.preventDefault();
 			    },false);
 			    el.addEventListener("touchmove", function(event) {
 			        this.scrollLeft=scrollStartPos-event.touches[0].pageX;

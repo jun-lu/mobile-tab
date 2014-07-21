@@ -317,7 +317,7 @@ KISSY.add('gallery/mobile-tab/1.0/index',function (S, Node,Base) {
 		}
 
 	};
-	
+
 	//andriod 2.3 overflow:scroll 无效处理 放弃滑动缓动
 	//alert(navigator.userAgent)
 	//alert(navigator.userAgent.indexOf("Android 2."))
@@ -329,7 +329,7 @@ KISSY.add('gallery/mobile-tab/1.0/index',function (S, Node,Base) {
 
 			    el.addEventListener("touchstart", function(event) {
 			        scrollStartPos=this.scrollLeft+event.touches[0].pageX;
-			        event.preventDefault();
+			        //event.preventDefault();
 			    },false);
 			    el.addEventListener("touchmove", function(event) {
 			        this.scrollLeft=scrollStartPos-event.touches[0].pageX;
